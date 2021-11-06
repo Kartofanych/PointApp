@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/brush_right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/brush_left"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/fir"
+            android:layout_above="@+id/first"
+            android:textSize="50dp"
+            android:fontFamily="@font/asket_extended_bold"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text=".manage"
+
+            />
+        <TextView
+            android:textSize="16dp"
+            android:fontFamily="@font/asket_extended_light"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fir"
+            android:text="Сервис оптимизации маршрутов"
+            android:layout_marginBottom="100dp"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DayTimeTable"
+    android:background="@color/white"
+    android:id="@+id/content"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="15dp"
+            android:padding="12dp"
+            android:layout_height="50dp"
+            android:id="@+id/account"
+            android:src="@drawable/us20"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="50dp"
+            android:id="@+id/weather"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/weather"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="70dp"
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="100dp"
+        >
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asket_extended_bold"
+            android:text="April 10, 2021"
+            android:layout_marginTop="25dp"
+            />
+
+        <TextView
+            android:layout_below="@+id/date"
+            android:id="@+id/how_much"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/asket_extended_bold"
+            android:text="Сколько всего надо успеть..."
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="-10dp">
+
+        <ernestoyaquello.com.verticalstepperform.VerticalStepperFormView
+            android:id="@+id/vertical_stepper_form"
+            app:form_circle_background_color="@color/blue"
+            app:form_circle_completed_background_color="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:form_title_text_size="16dp"
+            android:visibility="gone"
+            app:form_step_title_font_family="@font/asket_extended_bold"
+            android:layout_alignParentTop="true"
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="55dp"
+            android:padding="15dp"
+            android:layout_gravity="end"
+            android:layout_height="55dp"
+            android:background="@drawable/back_item"
+            android:src="@drawable/map_img"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:id="@+id/yam"
+            />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/weather_window"
+        android:elevation="10dp"
+        android:visibility="visible"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rel"
+            android:background="@drawable/weather_back"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="100dp"
+            android:layout_centerInParent="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.65"
+            >
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+
+                />
+            <TextView
+                android:id="@+id/now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сегодня"
+                android:textSize="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:textColor="#8A000000"
+                android:fontFamily="@font/asket_extended_bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/back_item"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/now"
+                android:layout_marginTop="30dp"
+                app:layout_constraintHeight_percent="0.5"
+                >
+                <TextView
+                    android:id="@+id/gradus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="-10°"
+                    android:textSize="150dp"
+                    />
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/id_weather"
+                android:layout_below="@+id/rel1"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/rain_sun_cloud"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintHeight_percent="0.55"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:elevation="5dp"
+        android:id="@+id/dark_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        />
+    <include layout="@layout/bottom_sheet"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
